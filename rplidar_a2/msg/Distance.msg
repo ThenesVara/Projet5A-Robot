@@ -1,0 +1,2 @@
+#string message
+float32 obstacle_distance
