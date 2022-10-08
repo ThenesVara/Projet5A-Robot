@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="rplidar_a2" type="publisher_lidar_distance.py" name="publisher_lidar_distance" output="screen"></node>
+    <node pkg="rplidar_a2" type="subscriber_lidar_distance.py" name="subscriber_lidar_distance" output="screen"></node>
+</launch>
