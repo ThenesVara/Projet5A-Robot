@@ -16,14 +16,14 @@
 
 *test_lidar.py*           : lance le lidar et détecte points inférieur à une distance 
 
-**MODIFIER** : subprocess.Popen(“echo **password** | sudo -S chmod 666 /dev/ttyUSB0”, stdout=subprocess.PIPE,shell=True) 
+**MODIFIER dans le code** : subprocess.Popen(“echo **password** | sudo -S chmod 666 /dev/ttyUSB0”, stdout=subprocess.PIPE,shell=True) 
 
 ## Scripts :
 *subscriber_lidar_distance.py* : souscrit à publisher_lidar_distance.py
 
 *publisher_lidar_distance.py* : publie la distance entre l’obstacle et le lidar en continu (avec seuil minimum et un angle défini)
 
-**MODIFIER** :subprocess.Popen(“echo **password** | sudo -S chmod 666 /dev/ttyUSB0”, stdout=subprocess.PIPE,shell=True) 
+**MODIFIER dans le code** : subprocess.Popen(“echo **password** | sudo -S chmod 666 /dev/ttyUSB0”, stdout=subprocess.PIPE,shell=True) 
 
 ## Launch :
 *ros_pub_subs_lidar.launch* : lance node publisher et subcriber du lidar distance
