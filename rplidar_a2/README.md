@@ -12,6 +12,7 @@ pip install rplidar
 ```
 
 2- Configuration
+
 For rplidarA2M8, rplidarA2M6 :
 - baudrate = 115200 
 - max_buf_meas = 5000 -> modifiable
