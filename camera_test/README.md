@@ -1,7 +1,9 @@
 # Fichiers
 
 ## Aruco
-Images aruco utilisés
+Images aruco utilisés : taille 4*4
+
+![Aruco_bleu1](https://user-images.githubusercontent.com/114569016/203520099-0dc5156b-6b91-4a32-9cc9-4f4867c84b06.png)
 
 ## Tests :
 Utilisation de la librairie : aruco.DICT_4X4_50 
@@ -14,4 +16,4 @@ Utilisation de la librairie : aruco.DICT_4X4_50
 ## Code :
 
 *tag_aruco.py*              : 
-*multipletagaruco.py*       : 
+*multipletagaruco.py*       : calibration et renvoit la position du aruco -> tous les aruco marchent pas à voir
