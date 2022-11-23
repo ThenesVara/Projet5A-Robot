@@ -8,7 +8,7 @@ pip install rplidar
 ```
 Or for Python3
 ```
-pip install rplidar
+pip3 install rplidar
 ```
 
 2- Configuration
