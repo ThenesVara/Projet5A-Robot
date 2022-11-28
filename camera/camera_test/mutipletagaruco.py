@@ -13,12 +13,13 @@ cap.set(4, 270)
 #cap.set(3, 1920)
 #cap.set(4, 1080)
 
+#modifier les coefficients cameraMatrix et distcoeff selon les valeurs obtenues après calibration (dans camera/camera_calibration/calibration.yaml)
 cameraMatrix = np.array(([1318.37800102873, 0.0, 0], [0.0, 1302.16095922522, 0], [520.419216783656, 244.134144200563, 1.0]))
 cameraMatrix = np.reshape(cameraMatrix, (3, 3))
 distcoeff = np.array(([-0.277568218167406, -0.0692640631211251, 0.0, 0.0]))
 distcoeff = np.reshape(distcoeff, (1, 4))
 
-arucoDict = aruco.Dictionary_get(aruco.DICT_4X4_250)
+arucoDict = aruco.Dictionary_get(aruco.DICT_4X4_50)
 arucoParam = aruco.DetectorParameters_create()
 
 
@@ -48,10 +49,12 @@ def calibrationArucoMarkers(img, corners, cameraMatrix, distcoeff, rvecs, tvecs)
 
 def findArucoMarkers(img, corners, cameraMatrix, distcoeff, rvecs, tvecs, Mcalibinv, ids):
     ttag = np.array(([tvecs[0][0]], [tvecs[0][1]], [tvecs[0][2]], [1]))#position : longueur, largeur, profondeur, 1
-    coords = Mcalibinv.dot(ttag)#recalibre pour mettre à 0
-    erreur = np.array(([0], [0], [0], [0]))#erreur si besoin de corriger
-    coordscorrige = np.add(coords, erreur)#ajoute coeff coords et erreur
+    coords = Mcalibinv.dot(ttag) #recalibre pour mettre à 0
+    erreur = np.array(([0], [0], [0], [0])) #erreur si besoin de corriger
+    coordscorrige = np.add(coords, erreur) #ajoute coeff coords et erreur
+    
     # aruco.drawAxis(img, cameraMatrix, distcoeff, rvecs, tvecs, 0.1) #dessine axes
+    
     print('\nNum du tag:', ids, '\nCoordonnées:')
     print("x: ", coordscorrige[0])
     print("y: ", coordscorrige[1])
@@ -78,7 +81,7 @@ while True:
                 
                 #Mcalibinv = calibrationArucoMarkers(img, corners, cameraMatrix, distcoeff, rvecs[i], tvecs[i])
                 
-                #Aruco initial -> position par rapport 0,0,0
+                #Aruco initial -> reference par rapport aux autres
                 if ids[i] == 1:
                     Mcalibinv = calibrationArucoMarkers(img, corners, cameraMatrix, distcoeff, rvecs[i], tvecs[i])
                     
