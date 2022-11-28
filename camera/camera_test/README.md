@@ -3,11 +3,17 @@
 Images aruco utilisés
 id :
 jaune = 13
+
 marron = 36
+
 rose = 47
+
 bleu1 = 2 
+
 bleu2 = 1
+
 vert1 = 7
+
 vert2 = 6
 
 ## Tests :
