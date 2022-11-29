@@ -11,5 +11,8 @@ camera/camera_test : Détection aruco, position aruco (à implémenter sur la ra
 
 ## Interface Graphique
 Lib: PyQt5
+
 Permetra de suivre en temps réel les déplacement du robot sur l'écran de celui-ci. 
+
+
 Il permettra aussi d'établir une stratégie et de simuler ses déplacements.
