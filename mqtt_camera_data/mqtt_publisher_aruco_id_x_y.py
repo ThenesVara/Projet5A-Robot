@@ -2,7 +2,6 @@
 
 import paho.mqtt.client as paho
 import time
-from datetime import datetime
 
 #temps pendant lequel il envoit les positions
 timer = 20
@@ -21,16 +20,21 @@ client1.connect(broker,port)
 client2.connect(broker,port)
 client3.connect(broker,port)
 
+
 id = [1, 5, 7, 8, 27]
-nbre_id = len(id)
 
 while timer > 1:
-    for i in range(nbre_id):
-        ret= client1.publish("id", i)#publish temperature
-        ret2= client2.publish("x", 28.2+i)#publish temperature
-        ret3= client2.publish("y", 12.1+i*3)#publish temperature
+    for i in range(len(id)):
+        ret= client1.publish("id", id[i])#publish temperature
+        time.sleep(0.05)
+        ret2= client2.publish("x", 28.1+i)#publish temperature
+        time.sleep(0.05)
+        ret3= client3.publish("y", 12.1+i)#publish temperature
+        time.sleep(0.05)
         
-    print("Aruco publie tous les aruco","id","x","y")
+    print("Aruco publie tous les arucos","id, x, y")
+    print('timer:',timer)
         
-    time.sleep(2) #attend x sec
+    time.sleep(2) #attend x secs avant de republier
     timer -=2
+    
