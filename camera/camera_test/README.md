@@ -1,18 +1,29 @@
 # Fichiers
 ## Aruco
 Images aruco utilisés
+
 id :
+
 jaune = 13
+
 marron = 36
+
 rose = 47
+
 bleu1 = 2 
+
 bleu2 = 1
+
 vert1 = 7
+
 vert2 = 6
 
 table1 = 20
+
 table2 = 21
+
 table3 = 22
+
 table4 = 23
 
 ## Tests :
