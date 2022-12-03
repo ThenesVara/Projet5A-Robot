@@ -1,4 +1,4 @@
-''' S'abonne en mqtt aux topics id,x,y (aruco), recupere donnees sous forme de matice'''
+''' S'abonne en mqtt aux topics id,x,y (aruco), recupere donnees sous forme de liste'''
 
 import paho.mqtt.client as mqtt
 import numpy as np
@@ -60,6 +60,7 @@ def on_message(client, userdata, message):
         j=0
 
     print('list',list)
+    #print(np.size(list))
 
 
 
@@ -69,14 +70,14 @@ port = 1883  # Broker port
 
 #protocole TLS : securisé ----------- > https://www.frugalprototype.com/mqtt-tls/
 
-#user = "rir"      #Connection username
-#password = "rir"  #Connection password
+user = "rir"      #Connection username
+password = "riir"  #Connection password
 
 client = mqtt.Client()  # create new instance
 
 client.on_connect = on_connect  # attach function to callback
 client.on_message = on_message  # attach function to callback
-#client.username_pw_set(username = user, password = password)    #set username and password
+client.username_pw_set(user, password)    #set username and password
 
 client.connect(broker_address, port=port)  # connect to broker
 
