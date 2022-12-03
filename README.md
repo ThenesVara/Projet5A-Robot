@@ -8,6 +8,11 @@ camera/camera_calibration : Générer des images avec une planche aruco pour obt
 
 camera/camera_test : Détection aruco, position aruco (à implémenter sur la raspberry)
 
+## MQTT Camera data
+mqtt_camera_data/ mqtt_publisher_aruco_id_x_y.py : Traite image, détecte position aruco et envoi ces donnees (id,x,y) en mqtt
+
+mqtt_camera_data/ mqtt_subscriber_camera_aruco_data_matrix.py : Souscrit aux donnees de la camera et récupère ces données (mise à jour toutes les x secondes)
+
 ## Interface Graphique
 Lib: PyQt5
 
