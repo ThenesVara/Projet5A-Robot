@@ -26,14 +26,20 @@ bleu1 = 2
 bleu2 = 1
 vert1 = 7
 vert2 = 6
+
+table1 = 20
+table2 = 21
+table3 = 22
+table4 = 23
 '''
 
 
 while True:
 	if VideoCap: _,img=cap.read()
+	
 	else:
-		img=cv2.imread("/home/rir/Desktop/camera_test/Aruco/Aruco_vert2.png")
-		img=cv2.resize(img,(0,0),fx=0.4,fy=0.4)
+		img=cv2.imread("/home/rir/Desktop/camera/camera_test/Aruco/Aruco_table4.png")
+		#img=cv2.resize(img,(0,0),fx=0.4,fy=0.4)
 	bbox,ids=findAruco(img)
 	print(ids)
 	if cv2.waitKey(1)==113:

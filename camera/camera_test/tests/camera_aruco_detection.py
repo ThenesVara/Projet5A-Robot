@@ -10,9 +10,11 @@ import cv2.aruco as aruco
 
 VideoCap=True
 cap=cv2.VideoCapture(0)
-cap.set(3, 640) #width 3
-cap.set(4, 480) #height 4
-cap.set(10, 100) # 10 brightness
+cap.set(3, 1920)
+cap.set(4, 1080)
+#cap.set(3, 640) #width 3
+#cap.set(4, 480) #height 4
+#cap.set(10, 100) # 10 brightness
 
 # marker_size=4 
 def findAruco(img, marker_size=4, total_markers=50, draw=True):
