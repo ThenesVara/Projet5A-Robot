@@ -38,3 +38,10 @@ Utilisation de la librairie : aruco.DICT_4X4_50
 
 ## Code :
 *detection_calibration_aruco_position* : lance la caméra, détecte les aruco -> 1 aruco de référence, position des autres par rapport à celui là 
+
+##Raspberry Pi
+- Enable camera : sudo raspi-config
+
+Go to Interface Option - Legacy Camera. Then enable camera
+
+- Install opencv : sudo apt install python3-opencv
