@@ -19,7 +19,12 @@ Raspi (ou jetson) du robot : subscriber
 *detection_calibration_aruco_position.py* : lance la caméra, détecte les aruco -> 1 aruco de référence, position des autres par rapport à celui là 
 
 
+## Raspberry Pi
 
+Installer la librairie paho-mqtt :
+```
+pip3 install paho-mqtt
+```
 
 
 
