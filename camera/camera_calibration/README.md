@@ -25,4 +25,12 @@ Code inspiré de : https://github.com/abakisita/camera_calibration
 
 4. Ce code va générer des matrices dans calibration.yaml avec les coefficients de matrice de la caméra et les coefficients de distorsion
 
-
+## Librairies
+- OpenCV
+```
+sudo apt install python3-opencv
+```
+- Yaml : 
+```
+pip install PyYAML
+```
