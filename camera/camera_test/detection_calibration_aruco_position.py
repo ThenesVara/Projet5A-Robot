@@ -7,7 +7,8 @@ import numpy as np
 import time
 import math
 
-#Arico de référence en position 0,0
+# ----> utiliser le code dans tests/camera_aruco_detection.py pour déterminer l'id de votre aruco de référence
+#Aruco de référence en position 0,0
 Aruco_origine = 22
 
 cap = cv2.VideoCapture(0)
