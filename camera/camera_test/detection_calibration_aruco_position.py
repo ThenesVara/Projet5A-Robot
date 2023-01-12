@@ -7,6 +7,9 @@ import numpy as np
 import time
 import math
 
+#Arico de référence en position 0,0
+Aruco_origine = 22
+
 cap = cv2.VideoCapture(0)
 cap.set(3, 480)
 cap.set(4, 270)
@@ -84,7 +87,7 @@ while True:
                 #Mcalibinv = calibrationArucoMarkers(img, corners, cameraMatrix, distcoeff, rvecs[i], tvecs[i])
                 
                 #Aruco initial -> reference (0,0) par rapport aux autres
-                if ids[i] == 1:
+                if ids[i] == Aruco_origine:
                     Mcalibinv = calibrationArucoMarkers(img, corners, cameraMatrix, distcoeff, rvecs[i], tvecs[i])
                     findArucoMarkers(img, corners, cameraMatrix, distcoeff, rvecs[i], tvecs[i], Mcalibinv, ids[i])
                     
