@@ -13,7 +13,7 @@ Code de : https://github.com/tizianofiorenzani/how_do_drones_work/tree/master/op
 
 2. camera_calibration.py : 
 - Modifier dimension 
-- Modifier path : workingForlder
+- Modifier path : workingFolder
 
 3. Lancer le code camera_calib.py
 
