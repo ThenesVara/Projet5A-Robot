@@ -4,9 +4,14 @@
 rplidar_a2 : package lidar ROS publisher / subscriber
 
 ## Camera
-camera/camera_calibration : Générer des images avec une planche aruco pour obtenir la matrice de la caméra et les coefficients de distorsion
+- Générer matrices caméra et distorsion :
+camera/camera_calibration_chessboard : Générer des images avec une planche d'échec pour obtenir la matrice de la caméra et les coefficients de distorsion
 
+- Avec les matrices de distorsion et de caméra - Détection aruco et position
 camera/camera_test : Détection aruco, position aruco (à implémenter sur la raspberry)
+
+- Optionnel - ne fonctionne pas toujours - Générer matrices caméra et distorsion :
+camera/camera_calibration : Générer des images avec une planche aruco pour obtenir la matrice de la caméra et les coefficients de distorsion (parfois erreur)
 
 ## MQTT Camera data
 mqtt_camera_data/ mqtt_publisher_aruco_id_x_y.py : Traite image, détecte position aruco et envoi ces donnees (id,x,y) en mqtt
