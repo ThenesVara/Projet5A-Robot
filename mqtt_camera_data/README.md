@@ -25,6 +25,10 @@ Installer la librairie paho-mqtt :
 ```
 pip3 install paho-mqtt
 ```
+OpenCV :
+```
+sudo apt install python3-opencv
+```
 
 
 
