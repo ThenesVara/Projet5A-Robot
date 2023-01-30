@@ -28,7 +28,7 @@ mqtt_camera_data/ mqtt_subscriber_camera_aruco_data_matrix.py : Souscrit aux don
 ## Interface Graphique
 Lib: PyQt5
 
-Permetra de suivre en temps réel les déplacement du robot sur l'écran de celui-ci. 
+Permetra de suivre en temps réel les déplacements du robot sur l'écran de celui-ci. 
 <img src="https://user-images.githubusercontent.com/114569016/215591124-62d49c13-abcd-4f0a-a9ec-cb02d57a6162.png" width=50% height=50%>
 
 Il permettra aussi d'établir une stratégie et de simuler ses déplacements.
