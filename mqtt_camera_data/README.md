@@ -21,14 +21,61 @@ Raspi (ou jetson) du robot : subscriber
 
 ## Raspberry Pi
 
-Installer la librairie paho-mqtt :
+### Librairies
+
+- Mosquitto :
+
 ```
-pip3 install paho-mqtt
+sudo apt install -y mosquitto
+sudo apt install -y mosquitto-clients
 ```
-OpenCV :
+
+- Paho-mqtt :
+
 ```
-sudo apt install python3-opencv
+sudo pip3 install paho-mqtt
+```
+
+- pip (if needed):
+
+```
+sudo apt install python3-pip
 ```
 
 
+### Start / stop mosquitto broker
+
+```
+sudo systemctl start mosquitto
+sudo systemctl start mosquitto.service
+sudo systemctl stop mosquitto.service
+sudo systemctl restart mosquitto.service
+```
+
+Verifier l'etat du broker mqtt :
+
+```
+sudo systemctl status mosquitto
+```
+
+### Activer tous les clients
+
+```
+cd /etc/mosquitto/
+```
+
+Modifier le fichier :
+
+```
+sudo nano moquitto.conf
+```
+
+Ajouter les lignes suivantes sur le fichier :
+
+```
+allow_anonymous true
+listener 1883 0.0.0.0
+```
+
+Erreur rencontrée : https://stackoverflow.com/questions/24556160/mosquitto-client-obtain-refused-connection?fbclid=IwAR0WUCksy6o98-WXznslFZKJHkOA5ck3pmP6M_8lMOtzQn6aqq0ffJl-Jwc
 
