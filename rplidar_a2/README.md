@@ -44,7 +44,7 @@ For rplidarA2M7, rplidarA3 :
 *ros_pub_subs_lidar.launch* : lance node publisher et subcriber du lidar distance
 
 ```
-source /lidar_ws/devel/setup.bash 
+source lidar_ws/devel/setup.bash 
 roslaunch rplidar_a2 ros_pub_subs_lidar.launch  
 ```
 
